@@ -1,0 +1,266 @@
+{
+  "root": "0x08c8b0913d42a9630edee5ca5c0654378b4a55f87de05fee6d6e43dfafec2d15",
+  "programId": "1",
+  "enrollees": [
+    {
+      "id": "amina",
+      "secret": "0xa2dd286dd8cc3016945e338cf28e9c3df05017412e668eac88f4339c0570f0",
+      "programId": "1",
+      "nullifier": "0x2d7ecaedd1326f2c863e2b5d87291df4a037e2cb813576b6eaeb5116c9deea9d",
+      "path": [
+        "0x1197367a5ee3742e002e92b4b58e779047893bf9674a4cf30e405b329ff6aeb4",
+        "0x2a7c60acf3766ce9c67970badb0d1adc21a8bea2e7507d7cf35c17a8b73efe78",
+        "0x0dc6b9de74ee051fd8d1abb6aca6077e4cc8280df34701052f8ebfe0df2146c9",
+        "0x236ddf61c4092dd0f903d57b4f126d986963dd39b3daba15c493e8bb237c423c",
+        "0x06e62084ee7b602fe9abc15632dda3269f56fb0c6e12519a2eb2ec897091919d",
+        "0x03c9e2e67178ac638746f068907e6677b4cc7a9592ef234ab6ab518f17efffa0",
+        "0x15d28cad4c0736decea8997cb324cf0a0e0602f4d74472cd977bce2c8dd9923f",
+        "0x268ed1e1c94c3a45a14db4108bc306613a1c23fab68e0466a002dfb0a3f8d2ab"
+      ],
+      "bits": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "samuel",
+      "secret": "0xa2ca670d722c76ec40bcf21dadc142aa25797f3537ea69f1e5e42105fc70ba",
+      "programId": "1",
+      "nullifier": "0x2a24111a76067cac9440d56ccfb557a56db57770b50aeeeeabc0c8a7db06b0ec",
+      "path": [
+        "0x242cfa6f64b97cedc23be4413f265e23330d47388ee692c8f823324d83181ee4",
+        "0x2a7c60acf3766ce9c67970badb0d1adc21a8bea2e7507d7cf35c17a8b73efe78",
+        "0x0dc6b9de74ee051fd8d1abb6aca6077e4cc8280df34701052f8ebfe0df2146c9",
+        "0x236ddf61c4092dd0f903d57b4f126d986963dd39b3daba15c493e8bb237c423c",
+        "0x06e62084ee7b602fe9abc15632dda3269f56fb0c6e12519a2eb2ec897091919d",
+        "0x03c9e2e67178ac638746f068907e6677b4cc7a9592ef234ab6ab518f17efffa0",
+        "0x15d28cad4c0736decea8997cb324cf0a0e0602f4d74472cd977bce2c8dd9923f",
+        "0x268ed1e1c94c3a45a14db4108bc306613a1c23fab68e0466a002dfb0a3f8d2ab"
+      ],
+      "bits": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "david",
+      "secret": "0xbb80dbf74864ff162672b9779834de13d212a76ae490cf39ab710060405803",
+      "programId": "1",
+      "nullifier": "0x091b68415032204c13c80ed2ef6f7100b995fb927df7fc57206c601a54599558",
+      "path": [
+        "0x2724ba90da301fa0fecc033d167e4996d7a08e4a783b62f4059f15e9ae1f508c",
+        "0x013ca8c3c9fa2a94307ffce35a822c4bce05b8391f15ea6b15a8edd90dc6935f",
+        "0x0dc6b9de74ee051fd8d1abb6aca6077e4cc8280df34701052f8ebfe0df2146c9",
+        "0x236ddf61c4092dd0f903d57b4f126d986963dd39b3daba15c493e8bb237c423c",
+        "0x06e62084ee7b602fe9abc15632dda3269f56fb0c6e12519a2eb2ec897091919d",
+        "0x03c9e2e67178ac638746f068907e6677b4cc7a9592ef234ab6ab518f17efffa0",
+        "0x15d28cad4c0736decea8997cb324cf0a0e0602f4d74472cd977bce2c8dd9923f",
+        "0x268ed1e1c94c3a45a14db4108bc306613a1c23fab68e0466a002dfb0a3f8d2ab"
+      ],
+      "bits": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "fatima",
+      "secret": "0xd4af5a20c38fef827c5d6d8dbb9eded14fa5af19f1470d8cff2151bfb6ee09",
+      "programId": "1",
+      "nullifier": "0x27cf227f51c943c6a0d4551f34dbf0805267307df0fbe831181f2644eb3f45ce",
+      "path": [
+        "0x1fa30ccc32ad99dbaf998ebac295fbf7b9c2fe7b170f93a2f4bd1c9189f76962",
+        "0x013ca8c3c9fa2a94307ffce35a822c4bce05b8391f15ea6b15a8edd90dc6935f",
+        "0x0dc6b9de74ee051fd8d1abb6aca6077e4cc8280df34701052f8ebfe0df2146c9",
+        "0x236ddf61c4092dd0f903d57b4f126d986963dd39b3daba15c493e8bb237c423c",
+        "0x06e62084ee7b602fe9abc15632dda3269f56fb0c6e12519a2eb2ec897091919d",
+        "0x03c9e2e67178ac638746f068907e6677b4cc7a9592ef234ab6ab518f17efffa0",
+        "0x15d28cad4c0736decea8997cb324cf0a0e0602f4d74472cd977bce2c8dd9923f",
+        "0x268ed1e1c94c3a45a14db4108bc306613a1c23fab68e0466a002dfb0a3f8d2ab"
+      ],
+      "bits": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "kwame",
+      "secret": "0xaf87de11bf749f5ed917ea54d566cefafbdfd2e0916d2c244b8834ef82d5d8",
+      "programId": "1",
+      "nullifier": "0x2d92f818b3c6ff1fab3a517c39c0c3b8638d9018854011ac484341902b6f42ba",
+      "path": [
+        "0x2557bab33cf0439b661b410c6c7fc079765afd0d5741d7afa2ffb4fd58bf919b",
+        "0x2c882270fb2f0db1b19c894215c58288b78a761591e881ecca2e6a413e936a9e",
+        "0x0d08e8c240a01c907678a8f8558de687a07a03c54717436f8b223324db35ef92",
+        "0x236ddf61c4092dd0f903d57b4f126d986963dd39b3daba15c493e8bb237c423c",
+        "0x06e62084ee7b602fe9abc15632dda3269f56fb0c6e12519a2eb2ec897091919d",
+        "0x03c9e2e67178ac638746f068907e6677b4cc7a9592ef234ab6ab518f17efffa0",
+        "0x15d28cad4c0736decea8997cb324cf0a0e0602f4d74472cd977bce2c8dd9923f",
+        "0x268ed1e1c94c3a45a14db4108bc306613a1c23fab68e0466a002dfb0a3f8d2ab"
+      ],
+      "bits": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "zainab",
+      "secret": "0x2776a3bd9af4ca942b1ee68687158141c550810acef2eb41c60c8a59b1cf4e",
+      "programId": "1",
+      "nullifier": "0x2029a1c7a710cad3494070c3443400e030a31d793d41237d682e38310b93798d",
+      "path": [
+        "0x22454b1632828fe593dcee490dfbf4d5d0043bcb5b891601934158cfb0d37efd",
+        "0x2c882270fb2f0db1b19c894215c58288b78a761591e881ecca2e6a413e936a9e",
+        "0x0d08e8c240a01c907678a8f8558de687a07a03c54717436f8b223324db35ef92",
+        "0x236ddf61c4092dd0f903d57b4f126d986963dd39b3daba15c493e8bb237c423c",
+        "0x06e62084ee7b602fe9abc15632dda3269f56fb0c6e12519a2eb2ec897091919d",
+        "0x03c9e2e67178ac638746f068907e6677b4cc7a9592ef234ab6ab518f17efffa0",
+        "0x15d28cad4c0736decea8997cb324cf0a0e0602f4d74472cd977bce2c8dd9923f",
+        "0x268ed1e1c94c3a45a14db4108bc306613a1c23fab68e0466a002dfb0a3f8d2ab"
+      ],
+      "bits": [
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "joseph",
+      "secret": "0xc1c38cf6410c2dceda063a30a27b6906cd9b17240bb536f66496aa45fcab0e",
+      "programId": "1",
+      "nullifier": "0x12dd8d727c474440bba78706848db05315f657cae03aba3936e778adbfb41168",
+      "path": [
+        "0x2f895c95230e068f9ab04d91abda74228f5d12dbe9b49260b4eca2b1d882cbb9",
+        "0x1a9aedfdc5b1acbb8ac81e91c3952df172a64f6fc268c61066de647e5d032e08",
+        "0x0d08e8c240a01c907678a8f8558de687a07a03c54717436f8b223324db35ef92",
+        "0x236ddf61c4092dd0f903d57b4f126d986963dd39b3daba15c493e8bb237c423c",
+        "0x06e62084ee7b602fe9abc15632dda3269f56fb0c6e12519a2eb2ec897091919d",
+        "0x03c9e2e67178ac638746f068907e6677b4cc7a9592ef234ab6ab518f17efffa0",
+        "0x15d28cad4c0736decea8997cb324cf0a0e0602f4d74472cd977bce2c8dd9923f",
+        "0x268ed1e1c94c3a45a14db4108bc306613a1c23fab68e0466a002dfb0a3f8d2ab"
+      ],
+      "bits": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "mariam",
+      "secret": "0x5e9d3925076e9196ad1a38303c0f4ee09d943326d12654e8f558ff6e5cd68f",
+      "programId": "1",
+      "nullifier": "0x1792b23b2193a68d05b3bb1d0cc965f3b4cb5e54e21ca1300fc1f9d97cb26c28",
+      "path": [
+        "0x0c981641f24c0dbbff0d8ddc8541ea5252a658376c9de45ccd8ab7687e1d408a",
+        "0x1a9aedfdc5b1acbb8ac81e91c3952df172a64f6fc268c61066de647e5d032e08",
+        "0x0d08e8c240a01c907678a8f8558de687a07a03c54717436f8b223324db35ef92",
+        "0x236ddf61c4092dd0f903d57b4f126d986963dd39b3daba15c493e8bb237c423c",
+        "0x06e62084ee7b602fe9abc15632dda3269f56fb0c6e12519a2eb2ec897091919d",
+        "0x03c9e2e67178ac638746f068907e6677b4cc7a9592ef234ab6ab518f17efffa0",
+        "0x15d28cad4c0736decea8997cb324cf0a0e0602f4d74472cd977bce2c8dd9923f",
+        "0x268ed1e1c94c3a45a14db4108bc306613a1c23fab68e0466a002dfb0a3f8d2ab"
+      ],
+      "bits": [
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "emmanuel",
+      "secret": "0x92664e464a1a5075d3e83cc9237efe7d3710c1bbd77bf7e4f19a23fec74730",
+      "programId": "1",
+      "nullifier": "0x244fe1b717df17c399ec2ccae43a04f5fffb22ff42a4ba992c4f727c9e19c7a6",
+      "path": [
+        "0x135a21771bcde0bb4237580c9f09cd3a879056d0ecfb6dfb8ab3a36a89aa6b1c",
+        "0x27b1d0839a5b23baf12a8d195b18ac288fcf401afb2f70b8a4b529ede5fa9fed",
+        "0x21dbfd1d029bf447152fcf89e355c334610d1632436ba170f738107266a71550",
+        "0x2af8466ed7f856da722df6fe7664999215b4cfbd7d27113e3025f141af5b1466",
+        "0x06e62084ee7b602fe9abc15632dda3269f56fb0c6e12519a2eb2ec897091919d",
+        "0x03c9e2e67178ac638746f068907e6677b4cc7a9592ef234ab6ab518f17efffa0",
+        "0x15d28cad4c0736decea8997cb324cf0a0e0602f4d74472cd977bce2c8dd9923f",
+        "0x268ed1e1c94c3a45a14db4108bc306613a1c23fab68e0466a002dfb0a3f8d2ab"
+      ],
+      "bits": [
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "id": "grace",
+      "secret": "0x8d9db1b569d5f5bfe9a69779e80e990a70e4fe4b2c9966f35f5d9013acbf24",
+      "programId": "1",
+      "nullifier": "0x2d4c70cdf67a2bdd31667590be7ca87fd7b68b25afbaa42d6cf3e46790b90c40",
+      "path": [
+        "0x2a5f010fb5b34d2f87e738be55636cc45b7b7f85d7ff9295d87e629f458057db",
+        "0x27b1d0839a5b23baf12a8d195b18ac288fcf401afb2f70b8a4b529ede5fa9fed",
+        "0x21dbfd1d029bf447152fcf89e355c334610d1632436ba170f738107266a71550",
+        "0x2af8466ed7f856da722df6fe7664999215b4cfbd7d27113e3025f141af5b1466",
+        "0x06e62084ee7b602fe9abc15632dda3269f56fb0c6e12519a2eb2ec897091919d",
+        "0x03c9e2e67178ac638746f068907e6677b4cc7a9592ef234ab6ab518f17efffa0",
+        "0x15d28cad4c0736decea8997cb324cf0a0e0602f4d74472cd977bce2c8dd9923f",
+        "0x268ed1e1c94c3a45a14db4108bc306613a1c23fab68e0466a002dfb0a3f8d2ab"
+      ],
+      "bits": [
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "amina",
+    "secret": "0xa2dd286dd8cc3016945e338cf28e9c3df05017412e668eac88f4339c0570f0"
+  },
+  {
+    "id": "samuel",
+    "secret": "0xa2ca670d722c76ec40bcf21dadc142aa25797f3537ea69f1e5e42105fc70ba"
+  },
+  {
+    "id": "david",
+    "secret": "0xbb80dbf74864ff162672b9779834de13d212a76ae490cf39ab710060405803"
+  },
+  {
+    "id": "fatima",
+    "secret": "0xd4af5a20c38fef827c5d6d8dbb9eded14fa5af19f1470d8cff2151bfb6ee09"
+  },
+  {
+    "id": "kwame",
+    "secret": "0xaf87de11bf749f5ed917ea54d566cefafbdfd2e0916d2c244b8834ef82d5d8"
+  },
+  {
+    "id": "zainab",
+    "secret": "0x2776a3bd9af4ca942b1ee68687158141c550810acef2eb41c60c8a59b1cf4e"
+  },
+  {
+    "id": "joseph",
+    "secret": "0xc1c38cf6410c2dceda063a30a27b6906cd9b17240bb536f66496aa45fcab0e"
+  },
+  {
+    "id": "mariam",
+    "secret": "0x5e9d3925076e9196ad1a38303c0f4ee09d943326d12654e8f558ff6e5cd68f"
+  },
+  {
+    "id": "emmanuel",
+    "secret": "0x92664e464a1a5075d3e83cc9237efe7d3710c1bbd77bf7e4f19a23fec74730"
+  },
+  {
+    "id": "grace",
+    "secret": "0x8d9db1b569d5f5bfe9a69779e80e990a70e4fe4b2c9966f35f5d9013acbf24"
+  }
+]

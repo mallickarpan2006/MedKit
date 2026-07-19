@@ -1,0 +1,26 @@
+[
+  {
+    "patientRef": "amina",
+    "credentialId": 0,
+    "docType": "1",
+    "issuedAt": 1782896269248
+  },
+  {
+    "patientRef": "kwame",
+    "credentialId": 1,
+    "docType": "1",
+    "issuedAt": 1782896274026
+  },
+  {
+    "patientRef": "testpatient",
+    "credentialId": 2,
+    "docType": "1",
+    "issuedAt": 1782898734162
+  },
+  {
+    "patientRef": "demo-patient",
+    "credentialId": 3,
+    "docType": "1",
+    "issuedAt": 1782898851831
+  }
+]
