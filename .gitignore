@@ -1,0 +1,12 @@
+target/
+Nargo.toml.bak
+.DS_Store
+node_modules/
+reference/
+medkit_claim/tree.json
+medkit_claim/tickets.json
+medkit_claim/demo-state.json
+
+contracts/verifier-v26/target/
+contracts/verifier-old-sdk25/target/
+.env*
