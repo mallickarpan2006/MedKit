@@ -1,0 +1,49 @@
+name: MedKit production deployment
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Deployment environment
+        required: true
+        default: testnet
+        type: choice
+        options: [testnet, mainnet]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    environment: ${{ inputs.environment }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - uses: dtolnay/rust-toolchain@stable
+        with: { targets: wasm32v1-none }
+      - name: Verify before deploy
+        working-directory: frontend
+        run: npm ci && npm run lint && npm run typecheck && npm test && npm run build
+      - name: Build pool WASM
+        run: cargo build --manifest-path contracts/pool/Cargo.toml --target wasm32v1-none --release
+      - name: Build verifier workspace
+        run: cargo build --manifest-path contracts/verifier-v26/Cargo.toml --target wasm32v1-none --release --package rs-soroban-ultrahonk
+      - name: Publish artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: medkit-release-${{ github.sha }}
+          path: |
+            frontend/dist
+            contracts/pool/target/wasm32v1-none/release/*.wasm
+            contracts/verifier-v26/target/wasm32v1-none/release/*.wasm
+            medkit_claim/deployment.json
+      # Actual chain deployment is intentionally an explicit, protected operation.
+      # The deployer secret must be supplied by the GitHub environment, never committed.
+      - name: Deployment gate
+        run: |
+          test -n "${STELLAR_NETWORK:-}" || { echo "Set STELLAR_NETWORK in the environment"; exit 1; }
+          echo "Artifacts verified for ${STELLAR_NETWORK}; invoke scripts/deploy-testnet.sh from a protected runner."
+        env:
+          STELLAR_NETWORK: ${{ vars.STELLAR_NETWORK }}

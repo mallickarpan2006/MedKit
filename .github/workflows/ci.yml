@@ -1,0 +1,53 @@
+name: MedKit CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32v1-none
+      - name: Frontend dependencies
+        working-directory: frontend
+        run: npm ci
+      - name: Frontend lint
+        working-directory: frontend
+        run: npm run lint
+      - name: Frontend typecheck
+        working-directory: frontend
+        run: npm run typecheck
+      - name: Frontend tests
+        working-directory: frontend
+        run: npm test
+      - name: Frontend production build
+        working-directory: frontend
+        run: npm run build
+      - name: Pool contract tests
+        run: cargo test --manifest-path contracts/pool/Cargo.toml
+      - name: Identity contract tests
+        run: cargo test --manifest-path contracts/verifier-v26/contracts/identity/Cargo.toml
+      - name: Package deployment artifacts
+        run: |
+          mkdir -p artifacts
+          cp -R frontend/dist artifacts/frontend-dist
+          cp medkit_claim/deployment.json artifacts/deployment.json
+          tar -czf artifacts/medkit-contracts-source.tgz contracts/pool contracts/verifier-v26/contracts/identity
+      - uses: actions/upload-artifact@v4
+        with:
+          name: medkit-build-${{ github.sha }}
+          path: artifacts
+
