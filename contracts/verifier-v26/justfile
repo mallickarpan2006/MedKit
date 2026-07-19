@@ -1,0 +1,33 @@
+# Ultrahonk Verifier — task runner
+# Install `just` then run `just` for help.
+
+set shell := ["bash", "-cu"]
+
+# =============================================================================
+# General
+# =============================================================================
+
+# Show available commands (default)
+default:
+    @just --list
+
+# =============================================================================
+# Circuits
+# =============================================================================
+
+# Build circuits (proof, vk, public_inputs). Builds all circuits by default;
+# pass one or more names to build only those (e.g. `just build-circuits simple_circuit identity`).
+build-circuits *names="":
+    bash ./circuits/scripts/build_all.sh {{names}}
+
+# =============================================================================
+# Contracts — General
+# =============================================================================
+
+# Build the Soroban contract WASM (pass extra args to `stellar contract build`)
+build-contract *args="":
+    stellar contract build {{args}}
+
+# Build only the Identity contract WASM
+build-identity-contract:
+    cargo build --release --target wasm32v1-none --package identity
