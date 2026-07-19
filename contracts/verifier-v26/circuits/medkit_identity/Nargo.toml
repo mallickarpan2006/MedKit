@@ -1,0 +1,6 @@
+[package]
+name = "medkit_identity"
+type = "bin"
+authors = ["MedKit"]
+
+[dependencies]
