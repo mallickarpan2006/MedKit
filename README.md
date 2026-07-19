@@ -56,9 +56,9 @@ cargo build --manifest-path contracts/pool/Cargo.toml --target wasm32v1-none --r
 
 Build fresh circuits and verifier artifacts before changing a verification key. Deploy a new verifier and a new pool together, then update the manifest. Use [`scripts/deploy-testnet.sh`](scripts/deploy-testnet.sh) with a protected Stellar CLI identity. Rollback means repointing the manifest to the prior immutable contract pair; see [`docs/OPERATIONS.md`](docs/OPERATIONS.md).
 
-## Tests and CI/CD
+## CI/CD
 
-The frontend has three passing Node tests covering formatting and edge cases. The pool has unit/integration-style tests for token deposits, malformed calldata rejection, withdrawals, and event schema compilation. CI runs as one sequential five-stage gate—checkout, frontend quality, contract tests, production build, and release packaging—on every push and pull request. The complete diagram and green criteria are in [`docs/CI-CD.md`](docs/CI-CD.md). Deployment is a manually approved workflow with environment gates; it does not expose signing keys.
+<img width="1458" height="813" alt="Screenshot 2026-07-19 at 11 05 08 PM" src="https://github.com/user-attachments/assets/18f6bbde-a6e4-4739-a10e-dc40f2230080" />
 
 ## Demo walkthrough
 
