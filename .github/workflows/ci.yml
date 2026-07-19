@@ -44,9 +44,19 @@ jobs:
         working-directory: frontend
         run: npm test
 
-  contracts:
-    name: "03 · Contract tests"
+  circuits:
+    name: "03 · Circuit artifacts"
     needs: frontend
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build identity proof artifacts
+        run: ./contracts/verifier-v26/circuits/scripts/build_all.sh medkit_identity
+
+  contracts:
+    name: "04 · Contract tests"
+    needs: circuits
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
@@ -60,7 +70,7 @@ jobs:
         run: cargo test --manifest-path contracts/verifier-v26/contracts/identity/Cargo.toml
 
   build:
-    name: "04 · Production build"
+    name: "05 · Production build"
     needs: contracts
     runs-on: ubuntu-latest
     timeout-minutes: 25
@@ -102,7 +112,7 @@ jobs:
           if-no-files-found: error
 
   package:
-    name: "05 · Release package"
+    name: "06 · Release package"
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 10

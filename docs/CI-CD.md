@@ -7,21 +7,23 @@ contract builds and release packaging from running.
 ```mermaid
 flowchart LR
     A[01 Checkout<br/>source revision] --> B[02 Frontend quality<br/>npm install → lint → typecheck → test]
-    B --> C[03 Contract tests<br/>Pool → Identity]
-    C --> D[04 Production build<br/>Vite + Pool WASM + Verifier WASM + Identity WASM]
-    D --> E[05 Release package<br/>frontend + WASM + manifest + source archive]
-    E --> F{Protected environment<br/>manual approval}
-    F -->|approved| G[Deploy<br/>Verifier → Pool → Frontend/API]
-    F -->|rejected| H[Stop safely]
-    G --> I[Read-only health check\nthen authenticated smoke test]
-    I -->|failure| J[Rollback\nrestore prior immutable manifest]
+    B --> C[03 Circuit artifacts<br/>Nargo + Barretenberg identity proof/VK/inputs]
+    C --> D[04 Contract tests<br/>Pool → Identity]
+    D --> E[05 Production build<br/>Vite + Pool WASM + Verifier WASM + Identity WASM]
+    E --> F[06 Release package<br/>frontend + WASM + manifest + source archive]
+    F --> G{Protected environment<br/>manual approval}
+    G -->|approved| H[Deploy<br/>Verifier → Pool → Frontend/API]
+    G -->|rejected| I[Stop safely]
+    H --> J[Read-only health check<br/>then authenticated smoke test]
+    J -->|failure| K[Rollback<br/>restore prior immutable manifest]
 ```
 
 ## Execution contract
 
-`ci.yml` runs stages 01–05 for every push and pull request. The `needs` chain
+`ci.yml` runs stages 01–06 for every push and pull request. The `needs` chain
 is deliberate: `frontend` waits for `checkout`, `contracts` waits for
-`frontend`, `build` waits for `contracts`, and `package` waits for `build`.
+`circuits`, `circuits` waits for `frontend`, `build` waits for `contracts`, and
+`package` waits for `build`.
 
 The build stage produces the deployable frontend and Soroban WASM artifacts.
 The package stage checks that the manifest, frontend bundle, contract WASM,
@@ -39,6 +41,8 @@ contract manifest as documented in [`OPERATIONS.md`](OPERATIONS.md).
 - Frontend dependencies install reproducibly from the lockfile-aware package manifest.
 - Lint, typecheck, frontend tests, and production build pass.
 - Aid pool and identity contract tests pass.
+- Identity proof, verification-key, and public-input artifacts are generated
+  before the identity tests run.
 - All three contract targets compile to `wasm32v1-none`.
 - The release package contains the frontend, deployment manifest, WASM files,
   and reproducibility source archive.
