@@ -1,4 +1,4 @@
-name: MedKit production deployment
+name: MedKit protected deployment
 
 on:
   workflow_dispatch:
@@ -13,37 +13,97 @@ on:
 permissions:
   contents: read
 
+# This is intentionally a second sequential conveyor. The environment gate is
+# the final mutation boundary and must be approved by the selected GitHub Environment.
 jobs:
-  deploy:
-    environment: ${{ inputs.environment }}
+  verify:
+    name: "01 · Verify release candidate"
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: 22 }
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
       - uses: dtolnay/rust-toolchain@stable
-        with: { targets: wasm32v1-none }
-      - name: Verify before deploy
+        with:
+          targets: wasm32v1-none
+      - name: Frontend gate
         working-directory: frontend
-        run: npm ci && npm run lint && npm run typecheck && npm test && npm run build
-      - name: Build pool WASM
-        run: cargo build --manifest-path contracts/pool/Cargo.toml --target wasm32v1-none --release
-      - name: Build verifier workspace
-        run: cargo build --manifest-path contracts/verifier-v26/Cargo.toml --target wasm32v1-none --release --package rs-soroban-ultrahonk
-      - name: Publish artifact
-        uses: actions/upload-artifact@v4
+        run: npm ci && npm run lint && npm run typecheck && npm test
+      - name: Contract gate
+        run: |
+          cargo test --manifest-path contracts/pool/Cargo.toml
+          cargo test --manifest-path contracts/verifier-v26/contracts/identity/Cargo.toml
+
+  build:
+    name: "02 · Build release artifacts"
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32v1-none
+      - name: Build frontend
+        working-directory: frontend
+        run: npm ci && npm run build
+      - name: Build contracts
+        run: |
+          cargo build --manifest-path contracts/pool/Cargo.toml --target wasm32v1-none --release
+          cargo build --manifest-path contracts/verifier-v26/Cargo.toml --target wasm32v1-none --release --package rs-soroban-ultrahonk
+          cargo build --manifest-path contracts/verifier-v26/contracts/identity/Cargo.toml --target wasm32v1-none --release
+      - name: Stage artifacts
+        run: |
+          mkdir -p artifacts/contracts
+          cp -R frontend/dist artifacts/frontend-dist
+          cp medkit_claim/deployment.json artifacts/deployment.json
+          cp contracts/pool/target/wasm32v1-none/release/*.wasm artifacts/contracts/
+          cp contracts/verifier-v26/target/wasm32v1-none/release/*.wasm artifacts/contracts/
+          cp contracts/verifier-v26/contracts/identity/target/wasm32v1-none/release/*.wasm artifacts/contracts/
+      - uses: actions/upload-artifact@v4
         with:
           name: medkit-release-${{ github.sha }}
-          path: |
-            frontend/dist
-            contracts/pool/target/wasm32v1-none/release/*.wasm
-            contracts/verifier-v26/target/wasm32v1-none/release/*.wasm
-            medkit_claim/deployment.json
-      # Actual chain deployment is intentionally an explicit, protected operation.
-      # The deployer secret must be supplied by the GitHub environment, never committed.
-      - name: Deployment gate
+          path: artifacts
+          if-no-files-found: error
+
+  package:
+    name: "03 · Validate release package"
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: medkit-release-${{ github.sha }}
+          path: release
+      - name: Validate immutable inputs
         run: |
-          test -n "${STELLAR_NETWORK:-}" || { echo "Set STELLAR_NETWORK in the environment"; exit 1; }
-          echo "Artifacts verified for ${STELLAR_NETWORK}; invoke scripts/deploy-testnet.sh from a protected runner."
+          test -s release/deployment.json
+          test -d release/frontend-dist
+          test -n "$(find release/contracts -name '*.wasm' -print -quit)"
+
+  deploy:
+    name: "04 · Deploy after approval"
+    needs: package
+    environment: ${{ inputs.environment }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deployment gate
         env:
           STELLAR_NETWORK: ${{ vars.STELLAR_NETWORK }}
+        run: |
+          test -n "${STELLAR_NETWORK:-}" || { echo "Set STELLAR_NETWORK in the selected environment"; exit 1; }
+          echo "Artifacts verified for ${STELLAR_NETWORK}."
+          echo "Invoke scripts/deploy-testnet.sh from the protected Stellar CLI signer."
+          echo "Signing keys are never stored in this repository or exposed to the frontend."

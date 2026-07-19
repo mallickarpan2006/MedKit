@@ -58,7 +58,7 @@ Build fresh circuits and verifier artifacts before changing a verification key. 
 
 ## Tests and CI/CD
 
-The frontend has three passing Node tests covering formatting and edge cases. The pool has unit/integration-style tests for token deposits, malformed calldata rejection, withdrawals, and event schema compilation. CI runs on every push and pull request, installs dependencies, lints, typechecks, runs frontend and Rust tests, builds the app/contracts, and uploads artifacts. Deployment is a manually approved workflow with environment gates; it does not expose signing keys.
+The frontend has three passing Node tests covering formatting and edge cases. The pool has unit/integration-style tests for token deposits, malformed calldata rejection, withdrawals, and event schema compilation. CI runs as one sequential five-stage gate—checkout, frontend quality, contract tests, production build, and release packaging—on every push and pull request. The complete diagram and green criteria are in [`docs/CI-CD.md`](docs/CI-CD.md). Deployment is a manually approved workflow with environment gates; it does not expose signing keys.
 
 ## Demo walkthrough
 
