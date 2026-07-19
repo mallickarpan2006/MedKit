@@ -122,7 +122,6 @@ jobs:
           cp medkit_claim/deployment.json artifacts/deployment.json
           cp contracts/pool/target/wasm32v1-none/release/*.wasm artifacts/contracts/
           cp contracts/verifier-v26/target/wasm32v1-none/release/*.wasm artifacts/contracts/
-          cp contracts/verifier-v26/contracts/identity/target/wasm32v1-none/release/*.wasm artifacts/contracts/
           tar -czf artifacts/medkit-contracts-source.tgz contracts/pool contracts/verifier-v26/contracts/identity contracts/verifier-v26/contracts/rs-soroban-ultrahonk
       - uses: actions/upload-artifact@v4
         with:

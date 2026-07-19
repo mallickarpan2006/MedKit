@@ -69,7 +69,6 @@ jobs:
           cp medkit_claim/deployment.json artifacts/deployment.json
           cp contracts/pool/target/wasm32v1-none/release/*.wasm artifacts/contracts/
           cp contracts/verifier-v26/target/wasm32v1-none/release/*.wasm artifacts/contracts/
-          cp contracts/verifier-v26/contracts/identity/target/wasm32v1-none/release/*.wasm artifacts/contracts/
       - uses: actions/upload-artifact@v4
         with:
           name: medkit-release-${{ github.sha }}
