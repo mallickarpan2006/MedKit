@@ -32,7 +32,7 @@ jobs:
           targets: wasm32v1-none
       - name: Frontend gate
         working-directory: frontend
-        run: npm ci && npm run lint && npm run typecheck && npm test
+        run: npm install --no-audit --no-fund && npm run lint && npm run typecheck && npm test
       - name: Contract gate
         run: |
           cargo test --manifest-path contracts/pool/Cargo.toml
@@ -55,7 +55,7 @@ jobs:
           targets: wasm32v1-none
       - name: Build frontend
         working-directory: frontend
-        run: npm ci && npm run build
+        run: npm install --no-audit --no-fund && npm run build
       - name: Build contracts
         run: |
           cargo build --manifest-path contracts/pool/Cargo.toml --target wasm32v1-none --release

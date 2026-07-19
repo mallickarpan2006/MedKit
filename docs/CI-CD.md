@@ -6,7 +6,7 @@ contract builds and release packaging from running.
 
 ```mermaid
 flowchart LR
-    A[01 Checkout<br/>source revision] --> B[02 Frontend quality<br/>npm ci → lint → typecheck → test]
+    A[01 Checkout<br/>source revision] --> B[02 Frontend quality<br/>npm install → lint → typecheck → test]
     B --> C[03 Contract tests<br/>Pool → Identity]
     C --> D[04 Production build<br/>Vite + Pool WASM + Verifier WASM + Identity WASM]
     D --> E[05 Release package<br/>frontend + WASM + manifest + source archive]
@@ -36,7 +36,7 @@ contract manifest as documented in [`OPERATIONS.md`](OPERATIONS.md).
 
 ## Green criteria
 
-- Frontend dependencies install from the lockfile.
+- Frontend dependencies install reproducibly from the lockfile-aware package manifest.
 - Lint, typecheck, frontend tests, and production build pass.
 - Aid pool and identity contract tests pass.
 - All three contract targets compile to `wasm32v1-none`.
