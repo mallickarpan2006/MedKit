@@ -1,0 +1,127 @@
+{
+  "root": "0x2320e3601854423b92940d28beff080968816d8dbc4044008733c54e1e90ec87",
+  "creds": [
+    {
+      "secret": "0xf136efcf2a3bc077d8a185e1601830cb8b31eb07b48861ef83f6b3c2b27016",
+      "docType": "1"
+    },
+    {
+      "secret": "0xd8673742d2c66fd668fe934dd224f0e2b25736c625df5a6b0d4a922d0a9b33",
+      "docType": "1"
+    },
+    {
+      "secret": "0x559f6309dc61ea9024ef58a3bf8bd8b95e277749490cebe18af50eccd2e6e4",
+      "docType": "1"
+    },
+    {
+      "secret": "0xc52b05e6b72d6a3f3be62b4b1be885689e6a8a2a61cf6e06e07ed64d99176",
+      "docType": "1"
+    }
+  ],
+  "credentials": [
+    {
+      "credentialId": 0,
+      "secret": "0xf136efcf2a3bc077d8a185e1601830cb8b31eb07b48861ef83f6b3c2b27016",
+      "docType": "1",
+      "nullifier": "0x085c9619b4f8a88ab26e746798db05ed871203312f826b1f7dc21e01b05eb58b",
+      "path": [
+        "0x0672b7dcd3446c0fad86c9b57f47f667689568a9a68594b7e571bd76685c55dd",
+        "0x2495cac1f1683f9561e87cb47505bdcffbbfc290c424805be4d2101d52561f27",
+        "0x21dbfd1d029bf447152fcf89e355c334610d1632436ba170f738107266a71550",
+        "0x0bcd1f91cf7bdd471d0a30c58c4706f3fdab3807a954b8f5b5e3bfec87d001bb",
+        "0x06e62084ee7b602fe9abc15632dda3269f56fb0c6e12519a2eb2ec897091919d",
+        "0x03c9e2e67178ac638746f068907e6677b4cc7a9592ef234ab6ab518f17efffa0",
+        "0x15d28cad4c0736decea8997cb324cf0a0e0602f4d74472cd977bce2c8dd9923f",
+        "0x268ed1e1c94c3a45a14db4108bc306613a1c23fab68e0466a002dfb0a3f8d2ab"
+      ],
+      "bits": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "credentialId": 1,
+      "secret": "0xd8673742d2c66fd668fe934dd224f0e2b25736c625df5a6b0d4a922d0a9b33",
+      "docType": "1",
+      "nullifier": "0x13f5367dbb37219528cfc754f2547b0505fb3aeabf4cbfee35bcdc6b1a9bf305",
+      "path": [
+        "0x1850b6cb2ec0114123151ee815b4c3af150a644ae74b1fdcc759615d62c57c73",
+        "0x2495cac1f1683f9561e87cb47505bdcffbbfc290c424805be4d2101d52561f27",
+        "0x21dbfd1d029bf447152fcf89e355c334610d1632436ba170f738107266a71550",
+        "0x0bcd1f91cf7bdd471d0a30c58c4706f3fdab3807a954b8f5b5e3bfec87d001bb",
+        "0x06e62084ee7b602fe9abc15632dda3269f56fb0c6e12519a2eb2ec897091919d",
+        "0x03c9e2e67178ac638746f068907e6677b4cc7a9592ef234ab6ab518f17efffa0",
+        "0x15d28cad4c0736decea8997cb324cf0a0e0602f4d74472cd977bce2c8dd9923f",
+        "0x268ed1e1c94c3a45a14db4108bc306613a1c23fab68e0466a002dfb0a3f8d2ab"
+      ],
+      "bits": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "credentialId": 2,
+      "secret": "0x559f6309dc61ea9024ef58a3bf8bd8b95e277749490cebe18af50eccd2e6e4",
+      "docType": "1",
+      "nullifier": "0x2e4352b0877c4abeae3861b8adfde0321aa99105c052ae437a0852c5597d4877",
+      "path": [
+        "0x06777e94944eca3e8f3821e70adda72bbe0aa6e6d5eff56aaea12e0184cf5276",
+        "0x0c73b56b2faef4593d321812f72f701113fa0a6744c6310c2a8b1f267e94984c",
+        "0x21dbfd1d029bf447152fcf89e355c334610d1632436ba170f738107266a71550",
+        "0x0bcd1f91cf7bdd471d0a30c58c4706f3fdab3807a954b8f5b5e3bfec87d001bb",
+        "0x06e62084ee7b602fe9abc15632dda3269f56fb0c6e12519a2eb2ec897091919d",
+        "0x03c9e2e67178ac638746f068907e6677b4cc7a9592ef234ab6ab518f17efffa0",
+        "0x15d28cad4c0736decea8997cb324cf0a0e0602f4d74472cd977bce2c8dd9923f",
+        "0x268ed1e1c94c3a45a14db4108bc306613a1c23fab68e0466a002dfb0a3f8d2ab"
+      ],
+      "bits": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "credentialId": 3,
+      "secret": "0xc52b05e6b72d6a3f3be62b4b1be885689e6a8a2a61cf6e06e07ed64d99176",
+      "docType": "1",
+      "nullifier": "0x0f6adf37769472be2b7f25d5c4770596dd170bbdb62445245ea21454b79d244c",
+      "path": [
+        "0x053822a0bca087b0693195c3ec65f7656fc63bd99db7c4865b99dd64c551fca8",
+        "0x0c73b56b2faef4593d321812f72f701113fa0a6744c6310c2a8b1f267e94984c",
+        "0x21dbfd1d029bf447152fcf89e355c334610d1632436ba170f738107266a71550",
+        "0x0bcd1f91cf7bdd471d0a30c58c4706f3fdab3807a954b8f5b5e3bfec87d001bb",
+        "0x06e62084ee7b602fe9abc15632dda3269f56fb0c6e12519a2eb2ec897091919d",
+        "0x03c9e2e67178ac638746f068907e6677b4cc7a9592ef234ab6ab518f17efffa0",
+        "0x15d28cad4c0736decea8997cb324cf0a0e0602f4d74472cd977bce2c8dd9923f",
+        "0x268ed1e1c94c3a45a14db4108bc306613a1c23fab68e0466a002dfb0a3f8d2ab"
+      ],
+      "bits": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "root": "0x1c89aacfd12ced71f0033ce2cdd315417500e9a04b2b0a355de0bd323c038f70",
+  "category": "medical",
+  "catId": "1",
+  "passes": [
+    {
+      "secret": "0xf4660078b793c3d322598514a11700e15c749c6d35441ef34a3cbc841736f4",
+      "catId": "1"
+    },
+    {
+      "secret": "0xc60b85d43a42a5404f4302e705742896847b6bceeeba21b9ca243d73977c18",
+      "catId": "1"
+    },
+    {
+      "secret": "0x77b9b33b3edaf85f8d46a61d8ee929fd022635e5edff9ca32a7ee9061c27a1",
+      "catId": "1"
+    },
+    {
+      "secret": "0x1ffa8aa7df0c6ae33b4ccf0b066560d5ae96ceeb86c31cc18c5bc7b052bbc0",
+      "catId": "1"
+    },
+    {
+      "secret": "0x5a1bf28278ec1a6e88e6796178d392d22b225063ec130172d2182516217f9b",
+      "catId": "1"
+    }
+  ],
+  "credentials": [
+    {
+      "passId": 0,
+      "secret": "0xf4660078b793c3d322598514a11700e15c749c6d35441ef34a3cbc841736f4",
+      "catId": "1",
+      "nullifier": "0x11147d995f32dc32b0a6ea620eb27a895e1e40df8166ec4195f4b9401a76f00f",
+      "path": [
+        "0x1bf572287f0d421b67b4a220ba3da9b105c6321e08792b92c345a4fca1c2662c",
+        "0x24ec4d41aff60c5f9e4fab03bc404351eaa72d2d08d743360631bfd65d9acf92",
+        "0x1f37f88c4f8c0f6fef9b0e47d7c19046ad77eed28cb4ea4b57711bfb9ab8f3c7",
+        "0x0bcd1f91cf7bdd471d0a30c58c4706f3fdab3807a954b8f5b5e3bfec87d001bb",
+        "0x06e62084ee7b602fe9abc15632dda3269f56fb0c6e12519a2eb2ec897091919d",
+        "0x03c9e2e67178ac638746f068907e6677b4cc7a9592ef234ab6ab518f17efffa0",
+        "0x15d28cad4c0736decea8997cb324cf0a0e0602f4d74472cd977bce2c8dd9923f",
+        "0x268ed1e1c94c3a45a14db4108bc306613a1c23fab68e0466a002dfb0a3f8d2ab"
+      ],
+      "bits": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "passId": 1,
+      "secret": "0xc60b85d43a42a5404f4302e705742896847b6bceeeba21b9ca243d73977c18",
+      "catId": "1",
+      "nullifier": "0x2796f1fb7104da20848c7a0add6ab54f1d299f2fde115944c01f9b8c134b6929",
+      "path": [
+        "0x174f1f547fac902272aa2bdb0b29893f465b9800e1ac8f9f96f299e2b74407bb",
+        "0x24ec4d41aff60c5f9e4fab03bc404351eaa72d2d08d743360631bfd65d9acf92",
+        "0x1f37f88c4f8c0f6fef9b0e47d7c19046ad77eed28cb4ea4b57711bfb9ab8f3c7",
+        "0x0bcd1f91cf7bdd471d0a30c58c4706f3fdab3807a954b8f5b5e3bfec87d001bb",
+        "0x06e62084ee7b602fe9abc15632dda3269f56fb0c6e12519a2eb2ec897091919d",
+        "0x03c9e2e67178ac638746f068907e6677b4cc7a9592ef234ab6ab518f17efffa0",
+        "0x15d28cad4c0736decea8997cb324cf0a0e0602f4d74472cd977bce2c8dd9923f",
+        "0x268ed1e1c94c3a45a14db4108bc306613a1c23fab68e0466a002dfb0a3f8d2ab"
+      ],
+      "bits": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "passId": 2,
+      "secret": "0x77b9b33b3edaf85f8d46a61d8ee929fd022635e5edff9ca32a7ee9061c27a1",
+      "catId": "1",
+      "nullifier": "0x0b64f481826369869800d7a7fd77a6326cf1c304656786a4f95d0bca812d3365",
+      "path": [
+        "0x13245e65e53bbb50db6db9ff203583e2ebd4e6ec49bf951b18b80780ae552871",
+        "0x00966ecd48af0e6e4811347c1a1bdc5cb26bb259ec990925af4341919ab6f3a4",
+        "0x1f37f88c4f8c0f6fef9b0e47d7c19046ad77eed28cb4ea4b57711bfb9ab8f3c7",
+        "0x0bcd1f91cf7bdd471d0a30c58c4706f3fdab3807a954b8f5b5e3bfec87d001bb",
+        "0x06e62084ee7b602fe9abc15632dda3269f56fb0c6e12519a2eb2ec897091919d",
+        "0x03c9e2e67178ac638746f068907e6677b4cc7a9592ef234ab6ab518f17efffa0",
+        "0x15d28cad4c0736decea8997cb324cf0a0e0602f4d74472cd977bce2c8dd9923f",
+        "0x268ed1e1c94c3a45a14db4108bc306613a1c23fab68e0466a002dfb0a3f8d2ab"
+      ],
+      "bits": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "passId": 3,
+      "secret": "0x1ffa8aa7df0c6ae33b4ccf0b066560d5ae96ceeb86c31cc18c5bc7b052bbc0",
+      "catId": "1",
+      "nullifier": "0x24d21256dbd5c3bd880d614aa59a5d4cf19ca6be1e5bcba8380d625862d27241",
+      "path": [
+        "0x0d57af026c7823d6ce597b03cf63d194a4194c6ce1d35df96dddc2438cb3d4ca",
+        "0x00966ecd48af0e6e4811347c1a1bdc5cb26bb259ec990925af4341919ab6f3a4",
+        "0x1f37f88c4f8c0f6fef9b0e47d7c19046ad77eed28cb4ea4b57711bfb9ab8f3c7",
+        "0x0bcd1f91cf7bdd471d0a30c58c4706f3fdab3807a954b8f5b5e3bfec87d001bb",
+        "0x06e62084ee7b602fe9abc15632dda3269f56fb0c6e12519a2eb2ec897091919d",
+        "0x03c9e2e67178ac638746f068907e6677b4cc7a9592ef234ab6ab518f17efffa0",
+        "0x15d28cad4c0736decea8997cb324cf0a0e0602f4d74472cd977bce2c8dd9923f",
+        "0x268ed1e1c94c3a45a14db4108bc306613a1c23fab68e0466a002dfb0a3f8d2ab"
+      ],
+      "bits": [
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "passId": 4,
+      "secret": "0x5a1bf28278ec1a6e88e6796178d392d22b225063ec130172d2182516217f9b",
+      "catId": "1",
+      "nullifier": "0x1fb6366f7ef48ccdba95a6706548e1aa0b7542c25453f268e6ac2eccc80c2213",
+      "path": [
+        "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "0x27b1d0839a5b23baf12a8d195b18ac288fcf401afb2f70b8a4b529ede5fa9fed",
+        "0x0fcba058c5c5adfe393bbdc55480588bf575ffe81fbac1d849e76ad900483bea",
+        "0x0bcd1f91cf7bdd471d0a30c58c4706f3fdab3807a954b8f5b5e3bfec87d001bb",
+        "0x06e62084ee7b602fe9abc15632dda3269f56fb0c6e12519a2eb2ec897091919d",
+        "0x03c9e2e67178ac638746f068907e6677b4cc7a9592ef234ab6ab518f17efffa0",
+        "0x15d28cad4c0736decea8997cb324cf0a0e0602f4d74472cd977bce2c8dd9923f",
+        "0x268ed1e1c94c3a45a14db4108bc306613a1c23fab68e0466a002dfb0a3f8d2ab"
+      ],
+      "bits": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    }
+  ]
+}
