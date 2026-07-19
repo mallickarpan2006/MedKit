@@ -80,7 +80,9 @@ jobs:
           name: medkit-circuit-${{ github.sha }}
           path: circuit-artifacts
       - name: Restore circuit artifacts
-        run: cp circuit-artifacts/medkit_identity/* contracts/verifier-v26/circuits/medkit_identity/target/
+        run: |
+          mkdir -p contracts/verifier-v26/circuits/medkit_identity/target
+          cp circuit-artifacts/medkit_identity/* contracts/verifier-v26/circuits/medkit_identity/target/
       - name: Test aid pool
         run: cargo test --manifest-path contracts/pool/Cargo.toml
       - name: Test identity verifier
